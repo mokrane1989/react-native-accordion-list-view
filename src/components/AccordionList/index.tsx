@@ -31,7 +31,11 @@ const AccordionList = ({
       }}
     />
   );
-  return <FlatList data={data} renderItem={renderItem} keyExtractor={(item, index) => index.toString()} {...props} />;
+  return <FlatList data={data} 
+           showsVerticalScrollIndicator={false}
+           showsHorizontalScrollIndicator={false}
+           renderItem={renderItem} 
+           keyExtractor={(item, index) => index.toString()} {...props} />;
 };
 
 export default AccordionList;
